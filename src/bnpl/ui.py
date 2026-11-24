@@ -27,7 +27,7 @@ CSS = """
 h1 {font-weight: 700; letter-spacing: -0.02em;} h2, h3 {letter-spacing: -0.01em;}
 .eyebrow {color:#0B6E4F; font-size:.8rem; font-weight:600; margin-bottom:.1rem;}
 .lede {color:#4A5952; font-size:1.02rem; max-width: 78ch; margin:.1rem 0 1.1rem 0;}
-.kpi {background:#fff; border:1px solid #E1E4DC; border-radius:10px; padding:14px 16px; min-height:112px;}
+.kpi {background:#fff; border:1px solid #E1E4DC; border-radius:10px; padding:14px 16px; min-height:128px;}
 .kpi .l {color:#5B6B64; font-size:.82rem;} .kpi .v {font-size:1.65rem; font-weight:700; color:#14241E; line-height:1.25;}
 .kpi .n {color:#5B6B64; font-size:.78rem;}
 .kpi.hero {background:#0B6E4F; border-color:#0B6E4F;} .kpi.hero * {color:#fff !important;}
@@ -48,7 +48,7 @@ def page(title, lede, eyebrow="BNPL Intelligence"):
 def kpis(items):
     for col, (label, value, note, *hero) in zip(st.columns(len(items)), items):
         col.markdown(f"<div class='kpi{' hero' if hero else ''}'><div class='l'>{label}</div>"
-                     f"<div class='v'>{value}</div><div class='n'>{note}</div></div>", unsafe_allow_html=True)
+                     f"<div class='v' style='font-size:{1.65 if len(str(value)) <= 7 else 1.3 if len(str(value)) <= 13 else 1.08}rem'>{value}</div><div class='n'>{note}</div></div>", unsafe_allow_html=True)
     st.write("")
 
 
