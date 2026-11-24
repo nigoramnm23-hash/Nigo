@@ -1,43 +1,33 @@
-# Deployment guide (Streamlit Community Cloud)
+# Deployment guide (GitHub Desktop + Streamlit Community Cloud)
 
-**Status: not yet deployed.** Publishing needs your own GitHub and Streamlit accounts and your approval. Everything else is ready.
+**Status: not yet deployed.** Publishing needs your own accounts and your approval. The repository contains no student ID, name or email: `report/` and `submission/` are git-ignored, and existing commits use the placeholder author `student@example.invalid`. The locked packages were checked to resolve for Linux / Python 3.12, which Streamlit uses.
 
-Before you publish: the repository contains no student ID, name or email (the `report/` and `submission/` folders are git-ignored). Commits use the placeholder author `student@example.invalid`.
+## A. Put the code on GitHub
+1. Create a free account at https://github.com/signup. Choose a username that does not reveal your name or ID.
+2. On GitHub: Settings > Emails, tick **Keep my email addresses private**. Copy the `...@users.noreply.github.com` address shown there.
+3. Install **GitHub Desktop** from https://desktop.github.com and sign in.
+4. In GitHub Desktop: File > Options > Git. Name = your username, Email = the noreply address.
+5. File > Add local repository, choose the `BNPL_Intelligence` folder, **Add repository**. If it says the folder is not trusted, choose to trust it.
+6. Check the **History** tab (real commits) and the **Changes** tab (should be empty; `report` and `submission` must not appear).
+7. **Publish repository**, name `bnpl-intelligence`. Untick *Keep this code private* so the lecturer can open it.
 
-## 1. Install Git and set your identity (once)
-Install Git from https://git-scm.com/download/win, then in PowerShell, inside the project folder:
+Do not use "Upload files" on the GitHub website: it would lose the commit history and could publish `report/`.
 
-```powershell
-git config user.name "Your GitHub username"
-```
-```powershell
-git config user.email "YOUR-ID+username@users.noreply.github.com"
-```
-GitHub shows your private noreply address under Settings > Emails. Using it keeps your real email out of the public history.
+## B. Deploy on Streamlit
+1. Open https://share.streamlit.io and choose **Continue with GitHub**. Read and accept the permissions yourself.
+2. **Create app** > deploy from GitHub. Repository `YOUR-USERNAME/bnpl-intelligence`, branch `main`, main file `app.py`.
+3. **Advanced settings > Python 3.12**. Keep Secrets empty. Deploy; the first build takes several minutes.
+4. If the app is private, set Settings > Sharing to public.
 
-## 2. Push to GitHub
-Create an **empty** repository (no README) named `bnpl-intelligence` on github.com. A private repository also works with Streamlit; check that your lecturer can open it. Then:
+## C. Verify before submitting
+- Open the URL in a private window (not signed in) and visit all seven pages.
+- BNPL predictor > Predict with the starting values must show **4.0%**, "Unlikely BNPL user".
+- ML laboratory: train one Logistic Regression.
+- Add the URL to the report (D.10) and README. Free apps sleep when unused: open it before marking and the viva.
 
-```powershell
-git branch -M main
-```
-```powershell
-git remote add origin https://github.com/YOUR-USERNAME/bnpl-intelligence.git
-```
-```powershell
-git push -u origin main
-```
+## D. Later commits
+Edit a file, open GitHub Desktop, write a short summary, **Commit to main**, **Push origin**. Streamlit updates by itself. Commit real work on the days you do it; do not change dates.
 
-## 3. Deploy
-1. Open https://share.streamlit.io and sign in with GitHub.
-2. **Create app**, choose the repository, branch `main`, main file `app.py`.
-3. **Advanced settings > Python 3.12**. This matters: the pinned packages are built for 3.12.
-4. Deploy. The first build takes several minutes.
-
-## 4. Verify before submitting
-- Open the URL in a private window (no login) and visit all seven pages.
-- BNPL predictor > Predict with the starting values should show the same percentage as on your computer.
-- Put the URL in the report (section D.9) and README. Free apps sleep when unused; open yours shortly before marking and the viva.
-
-## Weekly commits
-The rubric gives 3 marks for weekly commits. The history so far is real and all from 24 November. Commit your own review work (report edits, notebook comments, README URL) in the following days; do not change commit dates.
+## If something fails
+- *Build error about Python or a package:* the app was created without Python 3.12. Delete it in Streamlit and create it again.
+- *Any other error:* Manage app (bottom right) shows the log; copy the last lines.
