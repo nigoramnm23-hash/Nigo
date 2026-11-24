@@ -1,0 +1,79 @@
+{
+  "final_model": "Logistic Regression",
+  "strategy": {
+    "Logistic Regression": "No balancing",
+    "Decision Tree": "No balancing",
+    "Random Forest": "No balancing",
+    "Gradient Boosting": "No balancing"
+  },
+  "thresholds": {
+    "Logistic Regression": 0.23,
+    "Decision Tree": 0.19,
+    "Random Forest": 0.21,
+    "Gradient Boosting": 0.28
+  },
+  "best_params": {
+    "Logistic Regression": {
+      "C": 0.1,
+      "l1_ratio": 1.0
+    },
+    "Decision Tree": {
+      "min_samples_leaf": 100,
+      "max_depth": 10,
+      "criterion": "log_loss",
+      "ccp_alpha": 0.0
+    },
+    "Random Forest": {
+      "min_samples_leaf": 1,
+      "max_features": 0.35,
+      "max_depth": 6
+    },
+    "Gradient Boosting": {
+      "min_samples_leaf": 100,
+      "max_leaf_nodes": 4,
+      "max_iter": 200,
+      "learning_rate": 0.1,
+      "l2_regularization": 10.0
+    }
+  },
+  "seed": 42,
+  "features": [
+    "age",
+    "household_size",
+    "children_u18",
+    "afs_count",
+    "medical_skips",
+    "income_band",
+    "education",
+    "financial_wellbeing",
+    "change_vs_last_year",
+    "food_security",
+    "income_volatility",
+    "emergency_fund",
+    "can_cover_400",
+    "student_loan",
+    "retirement_account",
+    "bank_account",
+    "employment",
+    "partner_status",
+    "housing",
+    "region",
+    "metro",
+    "card_behaviour",
+    "credit_confidence",
+    "credit_score",
+    "spending_vs_income",
+    "bills_status"
+  ],
+  "rows": {
+    "train": 7741,
+    "valid": 2581,
+    "test": 2581
+  },
+  "positive_rate": {
+    "train": 0.1547603668776644,
+    "valid": 0.15497869043006587,
+    "test": 0.1545912437039907
+  },
+  "sklearn": "1.9.1"
+}

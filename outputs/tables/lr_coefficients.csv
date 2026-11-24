@@ -1,0 +1,59 @@
+Term,Feature,Coefficient,Odds ratio
+card_behaviour_Pays in full,card_behaviour,-0.690550084538373,0.5013002356984352
+credit_score_Excellent,credit_score,-0.6461054639240645,0.5240828670579457
+card_behaviour_No credit card,card_behaviour,-0.5012916846671113,0.6057477191243843
+credit_confidence_Very confident,credit_confidence,-0.31852367764261047,0.7272218588524547
+credit_score_Don't know,credit_score,-0.292699071013633,0.746246674166449
+card_behaviour_Carries balance mostly,card_behaviour,0.2591840246253758,1.295872255293312
+afs_count,afs_count,0.22063410807888334,1.2468671284815154
+age,age,-0.17964799727233074,0.835564280557564
+fragility_score,fragility_score,0.17880156074299505,1.1957834302470263
+region_South,region,0.17156223053452452,1.1871580179116379
+spending_vs_income_Less than your income,spending_vs_income,-0.1674051087911603,0.8458568778624183
+student_loan,student_loan,0.15895591651322286,1.1722862670754637
+can_cover_400,can_cover_400,-0.1539528204880795,0.8573124676411105
+log_equiv_income,log_equiv_income,0.1426491596304424,1.1533250976734246
+credit_score_Fair,credit_score,0.14073639302902372,1.15112116442293
+credit_score_Good,credit_score,-0.12875019965078932,0.8791935609754892
+housing_Neither owns nor rents,housing,-0.12121671776812354,0.8858419610961653
+partner_status_Married,partner_status,-0.12082858355550524,0.8861858534021071
+employment_Working,employment,0.1059764619094829,1.1117957066505582
+spending_vs_income_More than your income,spending_vs_income,0.10073145338426553,1.105979594802475
+metro_Non-Metro,metro,-0.09277505683958713,0.9113984900965072
+credit_confidence_Don't know,credit_confidence,-0.08900156206171662,0.914844144530321
+medical_skips,medical_skips,0.06859550811127087,1.071002909531453
+emergency_fund,emergency_fund,0.05920477214090994,1.0609924801987651
+bank_account,bank_account,0.057197413892249395,1.058864824390037
+income_band,income_band,0.05340274120615787,1.054854392912418
+card_behaviour_Carries balance sometimes,card_behaviour,0.046670482647453035,1.047776691587255
+child_share,child_share,0.04362206756331992,1.0445874967803164
+education,education,-0.038929234238119954,0.9618187705762192
+income_volatility,income_volatility,0.031733449101228293,1.032242323512688
+food_security,food_security,0.017676613145985218,1.0178337691015085
+change_vs_last_year,change_vs_last_year,0.016308116643850155,1.0164418198048448
+retirement_account,retirement_account,0.013466295585017144,1.0135573745161457
+household_size,household_size,0.012792039828983059,1.0128742079626796
+"partner_status_Divorced, separated or widowed",partner_status,0.012117882936764064,1.0121916019520572
+housing_Renter,housing,0.008381548358725404,1.0084167718756
+bills_status_Not all paid in full,bills_status,0.0058386473921036046,1.0058557255153233
+credit_confidence_Somewhat confident,credit_confidence,0.00470472351456158,1.0047158081027259
+metro_Metro,metro,9.2330938944902e-07,1.0000009233098157
+children_u18,children_u18,0.0,1.0
+financial_wellbeing,financial_wellbeing,0.0,1.0
+employment_Retired,employment,0.0,1.0
+partner_status_Never married,partner_status,0.0,1.0
+partner_status_Living with partner,partner_status,0.0,1.0
+employment_Not working,employment,0.0,1.0
+region_Midwest,region,0.0,1.0
+"housing_Owner, no mortgage",housing,0.0,1.0
+region_West,region,0.0,1.0
+region_Northeast,region,0.0,1.0
+housing_Owner with mortgage,housing,0.0,1.0
+card_behaviour_Carried balance once,card_behaviour,0.0,1.0
+credit_confidence_Not confident,credit_confidence,0.0,1.0
+credit_score_Not reported,credit_score,0.0,1.0
+credit_score_Very poor,credit_score,0.0,1.0
+credit_score_Poor,credit_score,0.0,1.0
+spending_vs_income_The same as your income,spending_vs_income,0.0,1.0
+bills_status_Paid in full with difficulty,bills_status,0.0,1.0
+bills_status_Paid in full without difficulty,bills_status,0.0,1.0

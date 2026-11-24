@@ -68,11 +68,11 @@ with right:
         ok = [v for v in vals if not explain.validate({**prof[k], f: v})]
         ys = pipe.predict_proba(pd.concat([explain.frame({**prof[k], f: v}) for v in ok], ignore_index=True))[:, 1] * 100 if ok else []
         fig.add_scatter(x=[str(v) if f not in explain.RANGES else v for v in ok], y=ys, name=f"Profile {k}", mode="lines+markers", line=dict(color=col, dash=dash, width=2), marker_size=8)
-    fig.add_hline(y=t * 100, line_color=cfg.C["non"], annotation_text="threshold")
-    fig.update_layout(title=f"Propensity as {cfg.LABELS[f].lower()} changes"); fig.update_yaxes(title="Estimated propensity (%)", rangemode="tozero")
+    fig.add_hline(y=t * 100, line_color=cfg.C["non"], annotation_text="threshold", annotation_position="top left")
+    fig.update_layout(title=f"Propensity as {cfg.LABELS[f].lower()} changes"); fig.update_yaxes(title="Estimated propensity (%)", rangemode="tozero"); fig.update_xaxes(tickangle=-45)
     ui.chart(fig, 440)
 diff = [f for f in cfg.FEATURES if prof["A"][f] != prof["B"][f]]
 st.markdown(f"**Profiles differ on {len(diff)} of {len(cfg.FEATURES)} inputs**")
 st.dataframe(pd.DataFrame({"Characteristic": [cfg.LABELS[f] for f in diff], "Profile A": [str(prof["A"][f]) for f in diff], "Profile B": [str(prof["B"][f]) for f in diff]}), hide_index=True, width="stretch")
 ui.limits("<b>Scenarios, not causes.</b> The comparison shows how the model's estimate changes when its inputs change. It does not show what would happen if a real "
-          "person's income, savings or credit changed: characteristics move together in reality, and the survey observed each person only once.")
+          "person's income, savings or credit changed: characteristics move together in reality, and the survey observed each person only once. Some lines run against the raw trend: BNPL use falls with income overall, yet the model's income line can rise, because it asks about higher income <i>with the same</i> credit score, savings and bills.")

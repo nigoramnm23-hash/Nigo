@@ -14,10 +14,10 @@ C = cfg.C
 EMERALD = [[0, "#F2F7F4"], [1, C["user"]]]
 pio.templates["bnpl"] = go.layout.Template(layout=dict(
     font=dict(family="Inter, Segoe UI, Arial, sans-serif", size=13, color=C["ink"]), paper_bgcolor="white",
-    plot_bgcolor="white", margin=dict(l=12, r=16, t=48, b=12), title=dict(font=dict(size=15), x=0.01, xanchor="left"),
+    plot_bgcolor="white", margin=dict(l=12, r=20, t=76, b=12), title=dict(font=dict(size=15), x=0.01, xanchor="left", y=0.97, yanchor="top"),
     xaxis=dict(gridcolor=C["grid"], zeroline=False, automargin=True, title=dict(font=dict(color=C["muted"]))),
     yaxis=dict(gridcolor=C["grid"], zeroline=False, automargin=True, title=dict(font=dict(color=C["muted"]))),
-    legend=dict(orientation="h", y=-0.22, x=0), hoverlabel=dict(bgcolor="white", font=dict(color=C["ink"])),
+    legend=dict(orientation="h", y=1.0, yanchor="bottom", x=0), hoverlabel=dict(bgcolor="white", font=dict(color=C["ink"])),
     colorway=[C["user"], "#2A78D6", "#EB6834", "#6250D6"]))
 pio.templates.default = "bnpl"
 
@@ -32,7 +32,7 @@ h1 {font-weight: 700; letter-spacing: -0.02em;} h2, h3 {letter-spacing: -0.01em;
 .kpi .n {color:#5B6B64; font-size:.78rem;}
 .kpi.hero {background:#0B6E4F; border-color:#0B6E4F;} .kpi.hero * {color:#fff !important;}
 [data-testid="stSidebar"] {border-right:1px solid #E1E4DC;}
-[data-testid="stPlotlyChart"] {background:#fff; border:1px solid #E1E4DC; border-radius:10px; padding:6px;}
+[data-testid="stPlotlyChart"] {background:#fff; border:1px solid #E1E4DC; border-radius:10px; overflow:hidden;}
 .limits {background:#fff; border:1px solid #E1E4DC; border-left:4px solid #0B6E4F; border-radius:8px; padding:12px 16px; color:#33433B; font-size:.92rem;}
 </style>
 """
@@ -58,7 +58,7 @@ def limits(text):
 
 def chart(fig, height=380, key=None):
     fig.update_layout(height=height)
-    st.plotly_chart(fig, width="stretch", key=key, config={"displayModeBar": False})
+    st.plotly_chart(fig, width="stretch", key=key, theme=None, config={"displayModeBar": False})
 
 
 @st.cache_data(show_spinner=False)

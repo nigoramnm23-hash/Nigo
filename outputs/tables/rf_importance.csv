@@ -1,0 +1,30 @@
+Feature,Label,Importance
+fragility_score,Financial fragility score (0-6),0.18266959692751922
+card_behaviour,Credit-card behaviour,0.16361038262193744
+can_cover_400,Can cover $400 with cash or equivalent,0.09265915529421385
+afs_count,Alternative financial services used (0-5),0.08009339007877209
+credit_score,Self-rated credit score,0.06493595558704782
+credit_confidence,Confidence of card approval,0.04727066438545075
+age,Age,0.04352385407838477
+student_loan,Has student loan,0.04245523860414832
+log_equiv_income,Equivalised income (log),0.03482517694734696
+income_band,Annual income,0.03054298263581138
+bills_status,Bill payment last month,0.023587385090310796
+medical_skips,Types of care skipped due to cost (0-5),0.023408557725614385
+employment,Employment status,0.017746761338592487
+spending_vs_income,Spending vs income,0.017456341762758783
+housing,Housing,0.013358760473713824
+financial_wellbeing,Financial well-being,0.01332271003441362
+child_share,Share of children in household,0.01309317371293323
+region,Region,0.01234033163998754
+partner_status,Partnership status,0.010746150967544155
+household_size,Household size,0.010506669276611473
+education,Education,0.010299138791436568
+change_vs_last_year,Finances vs last year,0.01008719082837947
+food_security,Food sufficiency,0.009510226839588973
+children_u18,Children under 18,0.009489340172063727
+emergency_fund,Three-month emergency fund,0.006130471776750076
+income_volatility,Income stability,0.005341215650331224
+bank_account,Has bank account,0.004199814513732446
+retirement_account,Has retirement account,0.003835608283082554
+metro,Metro status,0.0029537539615220564

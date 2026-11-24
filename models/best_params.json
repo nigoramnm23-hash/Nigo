@@ -1,0 +1,24 @@
+{
+  "Logistic Regression": {
+    "C": 0.1,
+    "l1_ratio": 1.0
+  },
+  "Decision Tree": {
+    "min_samples_leaf": 100,
+    "max_depth": 10,
+    "criterion": "log_loss",
+    "ccp_alpha": 0.0
+  },
+  "Random Forest": {
+    "min_samples_leaf": 1,
+    "max_features": 0.35,
+    "max_depth": 6
+  },
+  "Gradient Boosting": {
+    "min_samples_leaf": 100,
+    "max_leaf_nodes": 4,
+    "max_iter": 200,
+    "learning_rate": 0.1,
+    "l2_regularization": 10.0
+  }
+}

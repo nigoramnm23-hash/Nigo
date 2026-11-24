@@ -54,4 +54,4 @@ words = (f"**In words.** Raising the estimate most: {', '.join(up.Label.str.lowe
 st.markdown(words.replace("$", "\\$"))      # a bare dollar sign would be read as LaTeX
 ui.limits("<b>Limits of this estimate.</b> It is the model's estimate that someone with this profile would <i>report</i> past-year BNPL use in a survey like SHED 2025. "
           "Most people above the threshold are still non-users, because BNPL use is uncommon. It says nothing about future adoption, ability to repay or creditworthiness, "
-          "must not be used to approve, price or target credit, and the bars show association, not cause. Nothing you enter is stored.")
+          "must not be used to approve, price or target credit, and the bars show association, not cause. Emergency fund, $400 cover, bills, spending, skipped care and well-being also feed the fragility score, so their influence is split over two bars and one part can point the other way. Nothing you enter is stored.")

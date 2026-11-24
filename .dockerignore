@@ -1,0 +1,7 @@
+.git
+.venv
+report
+submission
+**/__pycache__
+**/.pytest_cache
+**/.ipynb_checkpoints

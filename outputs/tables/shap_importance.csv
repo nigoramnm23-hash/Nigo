@@ -1,0 +1,30 @@
+Feature,Label,Mean |SHAP| (log-odds)
+card_behaviour,Credit-card behaviour,0.35561650800150213
+credit_score,Self-rated credit score,0.2944273096552174
+age,Age,0.1570884785646491
+fragility_score,Financial fragility score (0-6),0.1509097326018292
+can_cover_400,Can cover $400 with cash or equivalent,0.14912229340784422
+credit_confidence,Confidence of card approval,0.1436376671313945
+afs_count,Alternative financial services used (0-5),0.1376324802647459
+student_loan,Has student loan,0.11003782963770516
+log_equiv_income,Equivalised income (log),0.1089202731066204
+spending_vs_income,Spending vs income,0.10165220349481366
+region,Region,0.07924978568653335
+partner_status,Partnership status,0.06177172415961716
+emergency_fund,Three-month emergency fund,0.059695150936849406
+employment,Employment status,0.051918858241075984
+medical_skips,Types of care skipped due to cost (0-5),0.05016207044833738
+income_band,Annual income,0.0436845188698063
+child_share,Share of children in household,0.037823356244456985
+education,Education,0.032461617310696744
+bank_account,Has bank account,0.02801472688770799
+income_volatility,Income stability,0.02607533107126023
+metro,Metro status,0.021022512293811493
+housing,Housing,0.018984044022103748
+food_security,Food sufficiency,0.014391910920457345
+retirement_account,Has retirement account,0.013244357927361559
+change_vs_last_year,Finances vs last year,0.011870621921285537
+household_size,Household size,0.010289724348830574
+bills_status,Bill payment last month,0.0013883900833084983
+children_u18,Children under 18,0.0
+financial_wellbeing,Financial well-being,0.0
