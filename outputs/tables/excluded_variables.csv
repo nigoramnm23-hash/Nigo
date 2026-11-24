@@ -1,0 +1,14 @@
+Excluded variable(s),Reason for exclusion
+"BNPL1A, BNPL3, BNPL3A, BNPL4_a-g, BNPL5, BNPL6_a-g, BNPL7_a-b","Target leakage: asked only of BNPL users, so being non-blank reveals the answer"
+BNPL1_iflag and all *_iflag,"Survey imputation flags, not characteristics of the person"
+"A0, A7_a-f, A1_a-c, A8, A2, A0B",Construct overlap: applying for 'other credit or loan' in the same 12 months may itself be a BNPL application
+BK2_f (overdraft fee),Possible consequence of BNPL: BNPL1A shows BNPL payments can trigger overdrafts
+"EF8_h, EF3_f",Borrowing measures that may overlap with BNPL use
+"EF7, EF7A",Split-sample question: each half of the sample saw a different answer scale
+ppfsasset,34% missing and overlaps with EF1 and pay_casheqv
+"ppemploy, ppinc7, ppeducat",Older panel-profile versions; the live survey answer is used instead
+"ppage groups, inc_4cat_50k, pprent, atleast_okay",Duplicates of selected variables
+"gender, race, pppa_lgb, pphispan",Protected characteristics: excluded on ethical grounds; gender and race kept for audit
+"weight*, panel_weight*","Design weights: used for population estimates, not as predictors"
+"shedid, duration, field_*, *date",Identifiers and survey-process data
+"pph* health items, ppp*, pphi*",Sensitive health/political items with no clear business need

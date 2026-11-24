@@ -1,0 +1,29 @@
+Feature,Label,Measure,Strength,p-value,Holm-adjusted p
+card_behaviour,Credit-card behaviour,Cramer's V (chi-square),0.2635839950811895,1.3738538822822027e-193,3.846790870390167e-192
+credit_score,Self-rated credit score,Cramer's V (chi-square),0.25352760272950475,3.640729217141828e-177,9.465895964568753e-176
+can_cover_400,Can cover $400 with cash or equivalent,Cramer's V (chi-square),0.251619261936588,7.0821940179336704e-180,1.9121923848420911e-178
+age,Age,Rank-biserial (Mann-Whitney),-0.24405653042189357,1.4261774183111665e-67,2.1392661274667499e-66
+credit_confidence,Confidence of card approval,Cramer's V (chi-square),0.24342035257893435,4.8644802505466217e-166,1.2161200626366553e-164
+medical_skips,Types of care skipped due to cost (0-5),Rank-biserial (Mann-Whitney),0.23921137528776204,2.2920413228399837e-110,4.813286777963966e-109
+financial_wellbeing,Financial well-being,Cramer's V (chi-square),0.22651694996022603,8.144907136297386e-144,1.9547777127113725e-142
+bills_status,Bill payment last month,Cramer's V (chi-square),0.21941278595816208,4.8922112246845514e-136,1.125208581677447e-134
+afs_count,Alternative financial services used (0-5),Rank-biserial (Mann-Whitney),0.19962843586854695,2.8629001628549034e-116,6.298380358280788e-115
+spending_vs_income,Spending vs income,Cramer's V (chi-square),0.19288065083359013,2.1709340172993553e-105,4.341868034598711e-104
+race,Race/ethnicity,Cramer's V (chi-square),0.19017291258584043,1.5193962565744116e-100,2.7349132618339407e-99
+emergency_fund,Three-month emergency fund,Cramer's V (chi-square),0.1887731409082226,3.2737433960401255e-102,6.220112452476238e-101
+food_security,Food sufficiency,Cramer's V (chi-square),0.1725852070866093,1.2505322854807672e-83,2.125904885317304e-82
+student_loan,Has student loan,Cramer's V (chi-square),0.1668125588618207,2.792245243008307e-80,4.4675923888132914e-79
+housing,Housing,Cramer's V (chi-square),0.1535930240365948,2.5284611112677187e-66,3.5398455557748062e-65
+children_u18,Children under 18,Rank-biserial (Mann-Whitney),0.13292283923776727,2.5356079822094655e-32,2.282047183988519e-31
+household_size,Household size,Rank-biserial (Mann-Whitney),0.12933925002669966,8.073403574562323e-22,4.844042144737394e-21
+employment,Employment status,Cramer's V (chi-square),0.12081318832579302,4.715336982525751e-42,6.129938077283477e-41
+income_band,Annual income,Cramer's V (chi-square),0.11863319659490928,4.381525682796579e-34,4.819678251076237e-33
+change_vs_last_year,Finances vs last year,Cramer's V (chi-square),0.11654906122024117,1.0767199087619201e-37,1.2920638905143041e-36
+partner_status,Partnership status,Cramer's V (chi-square),0.10730415399159172,1.2163366082161705e-32,1.2163366082161705e-31
+income_volatility,Income stability,Cramer's V (chi-square),0.09079838663986713,2.937862984942178e-24,2.0565040894595246e-23
+retirement_account,Has retirement account,Cramer's V (chi-square),0.09005325521812022,8.887238877510308e-25,7.109791102008246e-24
+education,Education,Cramer's V (chi-square),0.0864706949648887,7.8089358896123e-21,3.90446794480615e-20
+gender,Gender,Cramer's V (chi-square),0.06829429458259648,5.2182440568111326e-15,2.087297622724453e-14
+region,Region,Cramer's V (chi-square),0.047045332684010475,6.492250329915431e-07,1.9476750989746292e-06
+metro,Metro status,Cramer's V (chi-square),0.015594786097042714,0.04193539580643172,0.08387079161286344
+bank_account,Has bank account,Cramer's V (chi-square),0.0,0.41286997276643345,0.41286997276643345

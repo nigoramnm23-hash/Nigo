@@ -1,0 +1,7 @@
+Check,Rows affected
+Duplicate respondent IDs removed,0
+"Rows dropped: target answer was imputed by the survey, not reported",31
+"Children corrected to at least 1 (survey says own child at home, profile says 0)",344
+Household size raised to the minimum implied by partner and children,843
+Education set to missing: graduate degree reported below age 22 (implausible),8
+'Retired' under age 35 recoded to 'Not working' (implausible),16

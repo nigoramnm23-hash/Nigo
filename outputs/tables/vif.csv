@@ -1,0 +1,17 @@
+Feature,Label,VIF
+household_size,Household size,2.2736299929922517
+children_u18,Children under 18,2.2449322964434217
+financial_wellbeing,Financial well-being,2.222318334154357
+income_band,Annual income,2.0059741725075995
+can_cover_400,Can cover $400 with cash or equivalent,1.949612655451759
+food_security,Food sufficiency,1.7307916006221244
+emergency_fund,Three-month emergency fund,1.7174576921463178
+retirement_account,Has retirement account,1.5916290922194714
+education,Education,1.503068617326178
+age,Age,1.3808461765478568
+medical_skips,Types of care skipped due to cost (0-5),1.3682227017353137
+change_vs_last_year,Finances vs last year,1.3018656318728867
+bank_account,Has bank account,1.1993553815866254
+afs_count,Alternative financial services used (0-5),1.1891023699672978
+student_loan,Has student loan,1.1562575703080542
+income_volatility,Income stability,1.102268444298412
