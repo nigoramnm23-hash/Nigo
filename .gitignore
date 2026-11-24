@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+.pytest_cache/
+.streamlit/secrets.toml
+.DS_Store
+Thumbs.db
+# Coursework documents contain the student ID: submitted on the intranet, never published
+report/
+submission/
+# Extracted raw CSV (the app and notebook read the ZIP directly)
+data/raw/*.csv
