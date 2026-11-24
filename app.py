@@ -7,7 +7,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
 import streamlit as st  # noqa: E402
 
 st.set_page_config(page_title="BNPL Intelligence", page_icon=":material/insights:", layout="wide",
-                   initial_sidebar_state="expanded")
+                   initial_sidebar_state="auto")
 
 pages = {
     "Explore": [

@@ -41,7 +41,7 @@ with right:
                            marker_color=[cfg.C["user"], cfg.C["non"]],
                            text=[f"{n[1]:,} ({n[1] / len(df):.1%})", f"{n[0]:,} ({n[0] / len(df):.1%})"],
                            textposition=["outside", "inside"], hovertemplate="%{y}: %{x:,}<extra></extra>"))
-    fig.update_layout(title="Respondents by BNPL use (unweighted)", showlegend=False, bargap=.4)
+    fig.update_layout(title="BNPL use (unweighted)", showlegend=False, bargap=.4)
     fig.update_yaxes(autorange="reversed")
     ui.chart(fig, 250)
 
