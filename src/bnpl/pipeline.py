@@ -16,7 +16,7 @@ from sklearn.tree import DecisionTreeClassifier
 
 from . import config as cfg
 
-STRATEGIES = ["None", "Class weights", "Random oversampling", "SMOTENC"]
+STRATEGIES = ["No balancing", "Class weights", "Random oversampling", "SMOTENC"]
 MODEL_NAMES = ["Logistic Regression", "Decision Tree", "Random Forest", "Gradient Boosting"]
 
 
@@ -104,7 +104,7 @@ def estimator(name, class_weight=None, **params):
     raise ValueError(name)
 
 
-def build(name, params=None, strategy="None", features=None, derive=True, scale=True,
+def build(name, params=None, strategy="No balancing", features=None, derive=True, scale=True,
           credit_missing="category", sampler_kwargs=None):
     """Full pipeline: feature engineering -> preprocessing -> (resampling) -> classifier.
 
@@ -116,7 +116,7 @@ def build(name, params=None, strategy="None", features=None, derive=True, scale=
     fe = ("engineer", FeatureEngineer(derive=derive))
     cw = "balanced" if strategy == "Class weights" else None
     clf = ("clf", estimator(name, class_weight=cw, **params))
-    if strategy in ("None", "Class weights"):
+    if strategy in ("No balancing", "Class weights"):
         return Pipeline([fe, ("prep", preprocessor(features, derive, scale, credit_missing)), clf])
     if strategy == "Random oversampling":
         return ImbPipeline([fe, ("prep", preprocessor(features, derive, scale, credit_missing)),

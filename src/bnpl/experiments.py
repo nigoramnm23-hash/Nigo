@@ -21,7 +21,7 @@ PROTOCOL = """Decision rules fixed BEFORE any model result was seen
 1. The test set (20%) is used once, after model, strategy and threshold are fixed.
 2. Primary metric: average precision (AP) - it focuses on the minority class. ROC-AUC, Brier, F1 etc. are secondary.
 3. Hyperparameters: 5-fold stratified CV on the training set (60%), maximising AP.
-4. Imbalance strategy: keep 'None' unless another strategy raises mean CV AP by more than 0.005
+4. Imbalance strategy: keep 'No balancing' unless another strategy raises mean CV AP by more than 0.005
    (a smaller gain does not justify distorted probabilities).
 5. Model: among models whose CV AP is within one standard error of the best, take the simplest
    (Logistic Regression < Decision Tree < Random Forest < Gradient Boosting).
@@ -140,9 +140,9 @@ def choose(imb):
     """Apply rules 4 and 5 of the protocol."""
     strategies = {}
     for name, g in imb.groupby("Model", sort=False):
-        base = g[g.Strategy == "None"].iloc[0]
+        base = g[g.Strategy == "No balancing"].iloc[0]
         top = g.loc[g["CV AP"].idxmax()]
-        strategies[name] = top["Strategy"] if top["CV AP"] - base["CV AP"] > 0.005 else "None"
+        strategies[name] = top["Strategy"] if top["CV AP"] - base["CV AP"] > 0.005 else "No balancing"
     rows = [imb[(imb.Model == n) & (imb.Strategy == s)].iloc[0] for n, s in strategies.items()]
     t = pd.DataFrame(rows)[["Model", "Strategy", "CV AP", "CV AP SE", "CV ROC-AUC", "CV Brier", "Valid AP", "Valid Brier"]]
     b = t.loc[t["CV AP"].idxmax()]
