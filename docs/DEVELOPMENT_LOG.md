@@ -16,4 +16,6 @@ All work below was done on **24 November 2026** in one AI-assisted session. No c
 | Bug: figure title | Figure 9 title over-claimed and plotted the first age band at 15 | Neutral title, correct age bands |
 | Bug: "None" | Strategy name "None" was read from CSV as a missing value (found by the tests) | Renamed "No balancing"; outputs regenerated |
 | Bug: local path | `requirements.txt` header contained a local Windows path | Comments stripped |
+| Deployment | Repository pushed, app deployed on Streamlit Community Cloud with the student's accounts | All pages checked without signing in |
+| Bug: narrow screens | KPI cards broke words and the menu covered the page on phones (found on the public link) | Wrapping card grid; menu closed by default on phones |
 | App | Seven pages, tested headless and in a browser | Dev server bound to localhost only |

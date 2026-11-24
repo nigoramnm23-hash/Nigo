@@ -1,6 +1,6 @@
 # Deployment guide (GitHub Desktop + Streamlit Community Cloud)
 
-**Status: not yet deployed.** Publishing needs your own accounts and your approval. The repository contains no student ID, name or email: `report/` and `submission/` are git-ignored, and existing commits use the placeholder author `student@example.invalid`. The locked packages were checked to resolve for Linux / Python 3.12, which Streamlit uses.
+**Status: deployed on 24 November 2026** at https://bnpl-intelligence.streamlit.app (Streamlit Community Cloud, branch `main`, `app.py`, Python 3.12, no secrets). All seven pages were opened without signing in and the predictor returned 4.0%. The steps below describe how to repeat it. The repository contains no student ID, name or email: `report/` and `submission/` are git-ignored, and existing commits use the placeholder author `student@example.invalid`. The locked packages were checked to resolve for Linux / Python 3.12, which Streamlit uses.
 
 ## A. Put the code on GitHub
 1. Create a free account at https://github.com/signup. Choose a username that does not reveal your name or ID.

@@ -2,6 +2,8 @@
 
 **Consumer Behaviour Analytics & Machine Learning Platform.** Predicts whether a US adult reports having used Buy Now, Pay Later (BNPL) in the past year, from financial and demographic characteristics in the Federal Reserve Board's SHED 2025 survey. Binary classification with imbalanced classes (15.5% positive).
 
+**Live application:** https://bnpl-intelligence.streamlit.app
+
 This is a consumer-behaviour study. It is **not** a credit-risk, eligibility, pricing or targeting tool, and its associations are not causal.
 
 ## Results (held-out test set, n = 2,581)

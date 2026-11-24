@@ -21,15 +21,17 @@ Date: 24 November 2026. Environment: Windows 10, Python 3.12.10, 4 logical proce
 | App behaviour | Filters, empty result, weighted toggle, preprocessing controls, 4 algorithms, 4 strategies, thresholds, importance views, fairness views, presets, sweep of all 26 inputs | Pass |
 | Consistency | App shows the saved test metrics; predictor equals the model's own probability | Pass |
 | Browser check | Overview, Consumer analytics, BNPL predictor and Consumer simulator viewed; live prediction made | Pass, layout fixes made |
+| Public deployment | https://bnpl-intelligence.streamlit.app opened without signing in: all 7 pages load; predictor with starting values gives 4.0% ("Unlikely BNPL user"); ML laboratory trained a Logistic Regression in 0.7 s | Pass |
+| Narrow screens | Overview at 375 px, 1024 px and 1440 px after the layout fix | Pass, no sideways scrolling |
 | Documents | Report rendered through Word; figures, contents, page numbers checked; personal metadata removed | Pass |
 
 ## Errors found and fixed
-Dollar signs shown as formulas; over-claiming figure title; strategy name "None" read as missing; local path in `requirements.txt`; simulator control order; chart overflow; wrong figure references; an overstated claim about feature importance; student ID in the repository copy of the notebook; personal name in Word metadata.
+Dollar signs shown as formulas; over-claiming figure title; strategy name "None" read as missing; local path in `requirements.txt`; simulator control order; chart overflow; wrong figure references; an overstated claim about feature importance; student ID in the repository copy of the notebook; personal name in Word metadata; KPI cards that broke words on narrow screens and a menu that covered the page on phones (found on the public link).
 
 ## Remaining limitations
-- **Not deployed**, so the public URL is untested; needs the student's accounts.
+- The free host puts unused apps to sleep; open the link before marking.
 - **Docker image not built** (Docker is not installed here).
-- Tested on Windows only; tested with Chromium only; not tested with a screen reader or on a phone.
+- Tested on Windows only; tested with Chromium only; the public app itself runs on Linux; not tested with a screen reader or on a physical phone (only an emulated phone width).
 - Random Forest and SHAP could differ in the last digits on another CPU or library version; the lockfile limits this.
 - One train/validation/test split; bootstrap intervals do not include the variability of retraining.
 - Figures in notebook text were checked by hand against the outputs; they will not update by themselves if the data change.
